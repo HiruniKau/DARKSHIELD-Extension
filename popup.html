@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DarkShield Detector</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Header -->
+    <header class="app-header">
+      <div class="logo-area">
+        <svg class="shield-logo" viewBox="0 0 24 24" width="24" height="24">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+          <path d="M9 11l2 2 4-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <h1>DarkShield</h1>
+      </div>
+      <div class="version">v1.0 (Prototype)</div>
+    </header>
+
+    <!-- Url Indicator -->
+    <div class="url-card">
+      <span class="url-label">Website</span>
+      <span id="target-url" class="url-text">Loading tab...</span>
+    </div>
+
+    <!-- Scan Action -->
+    <div class="action-card">
+      <button id="scan-btn" class="scan-button">
+        <span class="btn-text">Scan Website</span>
+        <svg class="spinner hidden" viewBox="0 0 50 50">
+          <circle class="path" cx="25" cy="25" r="20" fill="none" stroke-width="5"></circle>
+        </svg>
+      </button>
+      <div id="status-message" class="status-msg text-muted">Ready to analyze</div>
+    </div>
+
+    <!-- Progress Tracker (Hidden by default) -->
+    <div id="progress-container" class="progress-card hidden">
+      <div class="progress-bar">
+        <div id="progress-fill" class="progress-fill"></div>
+      </div>
+      <div class="progress-steps">
+        <span id="step-text" class="step-text">Analyzing page...</span>
+      </div>
+    </div>
+
+    <!-- Results Section (Hidden by default) -->
+    <main id="results-container" class="results-area hidden">
+      <!-- Risk Level Summary Card -->
+      <section class="risk-card" id="risk-card">
+        <div class="risk-header">
+          <div class="risk-title-group">
+            <h2>Risk Level</h2>
+            <div id="risk-badge" class="risk-badge badge-low">LOW</div>
+          </div>
+          <div id="detection-count" class="detection-count">0 Detections</div>
+        </div>
+        <div class="risk-meter-container">
+          <div class="risk-meter-track">
+            <div id="risk-meter-fill" class="risk-meter-fill fill-low"></div>
+          </div>
+          <div class="risk-meter-labels">
+            <span>Low (0-2)</span>
+            <span>Medium (3-5)</span>
+            <span>High (6+)</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Table View -->
+      <section class="table-card">
+        <h3>Detection Logs</h3>
+        <div class="table-wrapper">
+          <table class="results-table">
+            <thead>
+              <tr>
+                <th>Pattern Type</th>
+                <th>Source</th>
+                <th>Confidence</th>
+              </tr>
+            </thead>
+            <tbody id="results-table-body">
+              <!-- Dynamically populated rows -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- BBox Visual Overlay Preview -->
+      <section class="visual-preview-card" id="visual-preview-section">
+        <h3>Visual BBoxes</h3>
+        <div class="preview-container">
+          <canvas id="screenshot-canvas"></canvas>
+          <div id="preview-placeholder" class="preview-placeholder">
+            <span>No visual detections to display</span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="app-footer">
+      <span>DARKSHIELD Academic Research Prototype</span>
+      <span>ONNX Runtime Web Local Inference</span>
+    </footer>
+  </div>
+
+  <!-- ONNX Runtime Web library -->
+  <script src="lib/ort.min.js"></script>
+  <!-- Main popup controller -->
+  <script type="module" src="popup.js"></script>
+</body>
+</html>
