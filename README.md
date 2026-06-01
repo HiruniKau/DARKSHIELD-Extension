@@ -143,8 +143,7 @@ Outputs from all three models are combined using a fusion mechanism to generate:
 | F1-Score  | 98.0% |
 
 ---
-<img width="2504" height="705" alt="_- visual selection (6)" src="https://github.com/user-attachments/assets/b3a7c081-8c35-46c3-a916-00c8b6ef5d2e" />
-
+<img width="2504" height="655" alt="_- visual selection (6)" src="https://github.com/user-attachments/assets/4f5f1b10-6c5f-4819-b834-610a99cd7f9d" />
 
 ## 📂 Dataset Summary
 
