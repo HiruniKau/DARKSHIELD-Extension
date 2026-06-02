@@ -116,31 +116,49 @@ Outputs from all three models are combined using a fusion mechanism to generate:
 
 ## 📊 Model Performance
 
-### NLP Model (ELECTRA-Small) Performance
+### NLP Models Performance
+👉 ELECTRA-small: https://www.kaggle.com/code/hirunikaushalya/electra-small-weighted-research-text-v3-for-onnx 
 
-| Metric    | Value |
-| --------- | ----- |
-| Accuracy  | 93.0% |
-| Precision | 90.0% |
-| Recall    | 90.0% |
-| F1-Score  | 90.0% |
+👉 ModernBERT-base: https://www.kaggle.com/code/hirunikaushalya/modernbert-small-weighted-research-text
 
-### Computer Vision Model (YOLO26n) Performance
+👉 DeBERTa-v3-xsmall: https://www.kaggle.com/code/hirunikaushalya/debertav3-small-weighted-research-text
 
-| Metric             | Value   |
-| ------------------ | ------- |
-| Accuracy           | 94.0%   |
-| mAP@50             | 20.6%   |
-| CPU Inference Time | 38.9 ms |
+👉 DistilBERT-base: https://www.kaggle.com/code/hirunikaushalya/distilbert-weighted-research-text
 
-### Interaction Model (BiLSTM + Attention) Performance
+👉 MobileBERT-uncased: https://www.kaggle.com/code/hirunikaushalya/mobilebert-weighted-research-text 
 
-| Metric    | Value |
-| --------- | ----- |
-| Accuracy  | 98.0% |
-| Precision | 98.0% |
-| Recall    | 98.0% |
-| F1-Score  | 98.0% |
+👉 TinyBERT (4L/312D): https://www.kaggle.com/code/hirunikaushalya/tinybert-weighted-research-text
+
+<img width="625" height="258" alt="nlp models" src="https://github.com/user-attachments/assets/f92bfa9a-d8a9-4eff-8646-4ded6cd1aaaa" />
+
+
+### Computer Vision Models Performance
+👉 YOLOv8n: https://www.kaggle.com/code/hirunikaushalya/dark-pattern-yolov8n-v9 
+
+👉 YOLOv10n: https://www.kaggle.com/code/hirunikaushalya/dark-pattern-yolov10n-v9 
+
+👉 YOLOv11n: https://www.kaggle.com/code/hirunikaushalya/dark-pattern-yolov11n-v9 
+
+👉 YOLOv12n: https://www.kaggle.com/code/hirunikaushalya/dark-pattern-yolov12n-v9
+
+👉 YOLOv26n: https://www.kaggle.com/code/hirunikaushalya/dark-pattern-yolov26n-v9
+
+<img width="639" height="189" alt="cv models" src="https://github.com/user-attachments/assets/500c83ae-761b-45cf-afe2-b635e25c2be3" />
+
+
+### Interaction Models Performance
+👉 BiLSTM + Attention: https://colab.research.google.com/drive/1AUIb4Qi_xv8UVKs_f-vBVPf0BQFjnbVO?usp=sharing 
+
+👉 LSTM Model: https://colab.research.google.com/drive/1WGLUGOng1bMfOVKEI19q69_gWFEm0CXu?usp=sharing  
+
+👉 GRU Model: https://colab.research.google.com/drive/1tUp-CZBPULZrS3Ky7F2tvUKzqOnJw57g?usp=sharing  
+
+👉 Vanilla RNN: https://colab.research.google.com/drive/1tUp-CZBPULZrS3Ky7F2tvUKzqOnJw57g?usp=sharing
+
+👉 Stacked LSTM: https://colab.research.google.com/drive/1tUp-CZBPULZrS3Ky7F2tvUKzqOnJw57g?usp=sharing
+
+<img width="597" height="150" alt="interaction models" src="https://github.com/user-attachments/assets/7149e4fa-f2b9-40d8-baca-7bebea898b36" />
+
 
 ---
 <img width="2504" height="655" alt="_- visual selection (6)" src="https://github.com/user-attachments/assets/4f5f1b10-6c5f-4819-b834-610a99cd7f9d" />
